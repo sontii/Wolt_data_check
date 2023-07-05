@@ -1,7 +1,10 @@
-from errormail import errorMail
+import sys
+from utils.errormail import errorMail
 from datetime import datetime
 import logging
 import fdb
+
+sys.path.append('utils')
 
 def queryFb(fetchType, query, envConfig):
 
