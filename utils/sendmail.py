@@ -1,11 +1,12 @@
 import smtplib
 import logging
 import os
+import sys
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime
-from errormail import errorMail
+from utils.errormail import errorMail
 
 def sendMail(filePath, fileName, datum, envConfig):
 
