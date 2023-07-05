@@ -6,6 +6,7 @@ from dotenv import load_dotenv, dotenv_values
 from utils.query_fb import queryFb
 from utils.sendmail import sendMail
 from datetime import date
+os.chdir('S:/Wolt_torzs')
 
 sys.path.append('utils')
 
@@ -46,7 +47,7 @@ def main():
                                     JOIN CIKMNY ON CIKMNY.CIK_ID=CIK.ID
                                     JOIN CIKKOD ON CIKKOD.CIKMNY_ID=CIKMNY.ID
                                     WHERE CIKKOD.KPC_ID = 10 AND CIKKOD.KOD = '%s' """ % (revrow[2].value), envConfig)
-                    
+                        print(validate)
                         if validate:
                             ws.delete_rows(revrow[0].row, 1)
                         else :
